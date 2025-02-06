@@ -7,7 +7,7 @@ export const TextInput = styled.textarea`
   padding: 15px;
   width: 100%;
   height: 75px;
-  border: 1px solid #b3bfcc;
+  border: 1px solidrgb(0, 104, 216);
   border-radius: 5px;
   outline: none;
   resize: none;

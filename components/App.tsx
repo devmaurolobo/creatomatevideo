@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { Preview, PreviewState } from '@creatomate/preview';
 import { useWindowWidth } from '../utility/useWindowWidth';
-import { SettingsPanel } from './SettingsPanel';
+import { SimpleSettingsPanel } from './SettingsPanel';
 
 const App: React.FC = () => {
   // React Hook to update the component when the window width changes
@@ -71,7 +71,7 @@ const App: React.FC = () => {
       <Panel>
         {isReady && (
           <PanelContent id="panel">
-            <SettingsPanel preview={previewRef.current!} currentState={currentState} />
+            <SimpleSettingsPanel preview={previewRef.current!} currentState={currentState} />
           </PanelContent>
         )}
       </Panel>
@@ -88,9 +88,11 @@ const Component = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
+  
 
   @media (min-width: 768px) {
     flex-direction: row;
+    
   }
 `;
 
@@ -100,6 +102,7 @@ const Wrapper = styled.div`
   @media (min-width: 768px) {
     flex: 1;
     padding: 20px;
+    
   }
 `;
 
@@ -114,8 +117,8 @@ const Container = styled.div`
 const Panel = styled.div`
   flex: 1;
   position: relative;
-  background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 6px 15px 0;
+  background:rgb(238, 238, 238);
+  box-shadow: rgba(190, 48, 48, 0.1) 0 6px 15px 0;
 
   @media (min-width: 768px) {
     flex: initial;
@@ -141,7 +144,7 @@ const LoadIndicator = styled.div`
   left: 50%;
   transform: translateX(-50%);
   padding: 5px 15px;
-  background: #fff;
+  background: #ffff;
   box-shadow: rgba(0, 0, 0, 0.1) 0 6px 15px 0;
   border-radius: 5px;
   font-size: 15px;

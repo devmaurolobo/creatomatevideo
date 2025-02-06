@@ -10,6 +10,7 @@ export const SelectInput = styled.select`
   border: 1px solid #b3bfcc;
   border-radius: 5px;
   outline: none;
+  
 
   // Arrow
   appearance: none;
@@ -21,5 +22,6 @@ export const SelectInput = styled.select`
   &:focus {
     background-color: #e9f4fc;
     border-color: #005aff;
+    
   }
 `;
